@@ -48,6 +48,13 @@ corr = numeric_features.corr()
 print(corr['SalePrice'].sort_values(ascending = False)[:5])
 print(corr['SalePrice'].sort_values(ascending = False)[-5:])
 
+#checking the heatmap for most effective feature on saleprice
+import seaborn as sb
+sb.heatmap(corr,square=True)
+sb.show()
+
+#it shows garage area has highest correlation so we can work with that.
+
 plt.scatter(x=train.GarageArea, y=target)
 plt.ylabel('target')
 plt.xlabel('GarageArea')

@@ -48,6 +48,7 @@ corr = numeric_features.corr()
 print(corr['SalePrice'].sort_values(ascending = False)[:5])
 print(corr['SalePrice'].sort_values(ascending = False)[-5:])
 
+#This map will show the most correlated features
 #checking the heatmap for most effective feature on saleprice
 import seaborn as sb
 sb.heatmap(corr,square=True)
